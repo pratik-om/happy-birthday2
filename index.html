@@ -3,69 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday</title>
+
+<title>Happy Birthday ❤️</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<!-- Background -->
-<div class="background"></div>
+<!-- ===================== -->
+<!-- STARS -->
+<!-- ===================== -->
 
-<!-- Floating Balloons -->
+<div class="stars"></div>
+<div class="twinkling"></div>
+
+<!-- ===================== -->
+<!-- BALLOONS -->
+<!-- ===================== -->
+
 <div class="balloons">
-    <span>🎈</span>
-    <span>🎈</span>
-    <span>🎈</span>
-    <span>🎈</span>
-    <span>🎈</span>
-    <span>🎈</span>
-</div>
 
-<!-- Main Content -->
-<div class="container">
-
-    <h1 class="title">
-        🎂 Happy Birthday 🎂
-    </h1>
-
-    <p class="instruction">
-        Swipe across the cake to cut it!
-    </p>
-
-    <!-- Cake -->
-    <div id="cake">
-
-        <div class="cake-left">
-            <div class="icing"></div>
-            <div class="layer"></div>
-            <div class="candles">
-                🕯️ 🕯️ 🕯️
-            </div>
-        </div>
-
-        <div class="cake-right">
-            <div class="icing"></div>
-            <div class="layer"></div>
-        </div>
-
-    </div>
-
-    <!-- Happy Birthday Message -->
-    <div id="message">
-        <h2>🎉 HAPPY BIRTHDAY! 🎉</h2>
-        <p>Wishing you happiness, success and lots of cake! ❤️</p>
-    </div>
+<div class="balloon red"></div>
+<div class="balloon blue"></div>
+<div class="balloon yellow"></div>
+<div class="balloon green"></div>
+<div class="balloon pink"></div>
+<div class="balloon purple"></div>
 
 </div>
 
-<!-- Confetti -->
+<!-- ===================== -->
+<!-- START SCREEN -->
+<!-- ===================== -->
+
+<section id="welcome">
+
+<h1 class="birthday-title">
+Happy Birthday
+</h1>
+
+<p class="subtitle">
+
+A magical birthday surprise is waiting...
+
+</p>
+
+<div id="giftBox">
+
+<div class="gift-top"></div>
+
+<div class="gift-body"></div>
+
+<div class="gift-ribbon-v"></div>
+
+<div class="gift-ribbon-h"></div>
+
+</div>
+
+<button id="startBtn">
+
+🎁 Open Surprise
+
+</button>
+
+</section>
+
+<!-- ===================== -->
+<!-- MAIN PAGE -->
+<!-- ===================== -->
+
+<section id="mainPage">
+
+<h1 class="mainTitle">
+
+🎉 HAPPY BIRTHDAY 🎉
+
+</h1>
+
+<p class="instruction">
+
+Swipe across the cake to cut it
+
+</p>
+
+<!-- ===================== -->
+<!-- CAKE -->
+<!-- ===================== -->
+
+<div id="cake">
+
+<div class="cake-left">
+
+<div class="candle c1"></div>
+<div class="candle c2"></div>
+<div class="candle c3"></div>
+
+<div class="flame f1"></div>
+<div class="flame f2"></div>
+<div class="flame f3"></div>
+
+<div class="icing"></div>
+
+<div class="layer layer1"></div>
+
+<div class="layer layer2"></div>
+
+<div class="layer layer3"></div>
+
+</div>
+
+<div class="cake-right">
+
+<div class="icing"></div>
+
+<div class="layer layer1"></div>
+
+<div class="layer layer2"></div>
+
+<div class="layer layer3"></div>
+
+</div>
+
+</div>
+
+<button id="wishBtn">
+
+🕯️ Make A Wish
+
+</button>
+
+<!-- ===================== -->
+<!-- MESSAGE -->
+<!-- ===================== -->
+
+<div id="birthdayMessage">
+
+<h2>
+
+🎂 Happy Birthday My Friend 🎂
+
+</h2>
+
+<p>
+
+May your life be filled with happiness,
+good health,
+love,
+success,
+and endless smiles.
+
+Have an amazing year ahead!
+
+❤️🎉🎂🎁🎈
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- CONFETTI -->
+<!-- ===================== -->
+
 <div id="confetti"></div>
 
-<!-- Party Poppers -->
-<div id="party">
-    🎉 🎊 🎉 🎊 🎉 🎊 🎉
-</div>
+<!-- ===================== -->
+<!-- FIREWORKS -->
+<!-- ===================== -->
+
+<div id="fireworks"></div>
+
+<!-- ===================== -->
+<!-- FLOATING HEARTS -->
+<!-- ===================== -->
+
+<div id="hearts"></div>
+
+<!-- ===================== -->
+<!-- MUSIC -->
+<!-- ===================== -->
+
+<audio
+id="music"
+loop>
+
+<source
+src="happybirthday.mp3"
+type="audio/mpeg">
+
+</audio>
 
 <script src="script.js"></script>
 
