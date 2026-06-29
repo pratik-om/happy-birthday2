@@ -1,0 +1,776 @@
+/* ==========================
+   GOOGLE STYLE RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #3b0a45,
+        #12002d,
+        #001d3d,
+        #3b0a45);
+
+    background-size:500% 500%;
+
+    animation:bgMove 15s linear infinite;
+
+    position:relative;
+}
+
+/* ==========================
+   Animated Background
+========================== */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+/* ==========================
+   STARS
+========================== */
+
+.stars{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px, transparent 1px);
+
+background-size:45px 45px;
+
+opacity:.35;
+
+animation:twinkle 3s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+from{
+
+opacity:.25;
+
+}
+
+to{
+
+opacity:.65;
+
+}
+
+}
+
+/* ==========================
+   COLOR LIGHTS
+========================== */
+
+.lights{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle,#ff0099 0%,transparent 45%),
+
+radial-gradient(circle,#00ffff 0%,transparent 40%),
+
+radial-gradient(circle,#ffee00 0%,transparent 40%),
+
+radial-gradient(circle,#00ff88 0%,transparent 45%);
+
+background-size:
+
+400px 400px,
+
+350px 350px,
+
+500px 500px,
+
+450px 450px;
+
+background-position:
+
+10% 20%,
+
+80% 25%,
+
+30% 80%,
+
+90% 75%;
+
+filter:blur(80px);
+
+animation:lightMove 10s ease infinite;
+
+opacity:.7;
+
+}
+
+@keyframes lightMove{
+
+50%{
+
+transform:scale(1.2) rotate(180deg);
+
+}
+
+100%{
+
+transform:scale(1) rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+   SPARKLES
+========================== */
+
+.sparkles{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+}
+
+.sparkles::before{
+
+content:"";
+
+position:absolute;
+
+width:250%;
+
+height:250%;
+
+background-image:radial-gradient(white 1px, transparent 1px);
+
+background-size:30px 30px;
+
+animation:rotateSpark 60s linear infinite;
+
+opacity:.25;
+
+}
+
+@keyframes rotateSpark{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+   MAIN CARD
+========================== */
+
+.container{
+
+position:relative;
+
+z-index:10;
+
+width:90%;
+
+max-width:850px;
+
+padding:40px;
+
+border-radius:30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.25);
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.4);
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.title{
+
+font-size:58px;
+
+font-weight:800;
+
+color:#fff;
+
+letter-spacing:2px;
+
+text-shadow:
+
+0 0 20px #ff00ff,
+
+0 0 40px cyan,
+
+0 0 60px yellow;
+
+animation:glowTitle 2s infinite alternate;
+
+}
+
+@keyframes glowTitle{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.05);
+
+}
+
+}
+
+.subtitle{
+
+margin-bottom:18px;
+
+font-size:22px;
+
+color:white;
+
+opacity:.9;
+
+}
+
+/* ==========================
+   BALLOONS
+========================== */
+
+.balloons{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.balloons span{
+
+position:absolute;
+
+bottom:-200px;
+
+width:60px;
+
+height:80px;
+
+border-radius:50%;
+
+animation:floatBalloon linear infinite;
+
+left:calc(var(--i)*10%);
+
+animation-duration:calc(12s + var(--i));
+
+}
+
+.balloons span:nth-child(1){background:#ff4d6d;}
+.balloons span:nth-child(2){background:#00e5ff;}
+.balloons span:nth-child(3){background:#ffd60a;}
+.balloons span:nth-child(4){background:#00ff88;}
+.balloons span:nth-child(5){background:#ff00ff;}
+.balloons span:nth-child(6){background:#ff6b00;}
+.balloons span:nth-child(7){background:#00b4ff;}
+.balloons span:nth-child(8){background:#7bff00;}
+.balloons span:nth-child(9){background:#ff3366;}
+.balloons span:nth-child(10){background:#9d4edd;}
+
+.balloons span::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:80px;
+
+width:2px;
+
+height:90px;
+
+background:white;
+
+transform:translateX(-50%);
+
+opacity:.6;
+
+}
+
+@keyframes floatBalloon{
+
+0%{
+
+transform:translateY(0) rotate(-5deg);
+
+}
+
+50%{
+
+transform:translateY(-60vh) rotate(6deg);
+
+}
+
+100%{
+
+transform:translateY(-130vh) rotate(-5deg);
+
+}
+
+}
+
+/* ==========================
+   MESSAGE
+========================== */
+
+#message{
+
+display:none;
+
+margin-top:40px;
+
+animation:pop .8s ease;
+
+}
+
+#message h1{
+
+font-size:60px;
+
+color:#fff;
+
+text-shadow:0 0 25px gold;
+
+margin-bottom:15px;
+
+}
+
+#message p{
+
+font-size:24px;
+
+color:#ffffff;
+
+margin-bottom:25px;
+
+}
+
+@keyframes pop{
+
+from{
+
+opacity:0;
+
+transform:scale(.4);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/* ==========================
+   REPLAY BUTTON
+========================== */
+
+#replay{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff0080,#ffcc00);
+
+color:#fff;
+
+transition:.3s;
+
+box-shadow:0 0 20px rgba(255,255,255,.5);
+
+}
+
+#replay:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 40px gold;
+
+}
+
+/* =========================================
+   PART 2A - PROFESSIONAL 3D CAKE
+========================================= */
+
+#cake{
+    position:relative;
+    width:420px;
+    height:340px;
+    margin:50px auto;
+    touch-action:none;
+    user-select:none;
+}
+
+/* Cake Halves */
+
+.cake-left,
+.cake-right{
+    position:absolute;
+    width:210px;
+    height:250px;
+    bottom:0;
+    transition:1.2s cubic-bezier(.2,.8,.2,1);
+}
+
+.cake-left{
+    left:0;
+}
+
+.cake-right{
+    right:0;
+}
+
+/* Cake Layers */
+
+.layer{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:180px;
+    border-radius:18px;
+    box-shadow:
+        inset 0 -8px rgba(0,0,0,.15),
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+/* Top Layer */
+
+.top{
+    top:25px;
+    height:55px;
+    background:linear-gradient(#ff9ecf,#ff5ca8);
+}
+
+/* Middle Layer */
+
+.middle{
+    top:90px;
+    height:65px;
+    background:linear-gradient(#ffd166,#ffb703);
+}
+
+/* Bottom Layer */
+
+.bottom{
+    top:165px;
+    height:75px;
+    background:linear-gradient(#9d4edd,#6a00f4);
+}
+
+/* Cream Icing */
+
+.icing{
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:190px;
+    height:28px;
+    background:white;
+    border-radius:30px;
+    box-shadow:
+        0 4px 10px rgba(255,255,255,.7);
+}
+
+.icing::before,
+.icing::after{
+    content:"";
+    position:absolute;
+    bottom:-12px;
+    width:18px;
+    height:18px;
+    background:white;
+    border-radius:50%;
+}
+
+.icing::before{
+    left:35px;
+}
+
+.icing::after{
+    right:35px;
+}
+
+/* Candles */
+
+.candles{
+    position:absolute;
+    top:-30px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:28px;
+}
+
+.candle{
+    width:10px;
+    height:45px;
+    border-radius:10px;
+    background:linear-gradient(
+        white,
+        #ff5ca8
+    );
+    position:relative;
+}
+
+/* Flames */
+
+.flame{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    width:14px;
+    height:18px;
+    border-radius:50%;
+    background:gold;
+    box-shadow:
+        0 0 8px yellow,
+        0 0 18px orange,
+        0 0 30px red;
+    animation:flicker .15s infinite alternate;
+}
+
+@keyframes flicker{
+
+0%{
+transform:
+translateX(-50%)
+scale(1);
+}
+
+100%{
+transform:
+translateX(-50%)
+scale(1.2);
+}
+
+}
+
+/* Knife */
+
+#knife{
+
+position:absolute;
+
+width:220px;
+height:8px;
+
+background:linear-gradient(
+90deg,
+silver,
+white,
+silver);
+
+border-radius:20px;
+
+left:95px;
+top:110px;
+
+transform:rotate(-25deg);
+
+box-shadow:
+0 0 15px rgba(255,255,255,.7);
+
+transition:.15s;
+
+z-index:100;
+
+}
+
+#knife::after{
+
+content:"";
+
+position:absolute;
+
+right:-25px;
+top:-8px;
+
+width:40px;
+height:24px;
+
+background:#8b4513;
+
+border-radius:5px;
+
+}
+
+/* Swipe Line */
+
+#swipeLine{
+
+position:absolute;
+
+left:50%;
+
+top:20px;
+
+transform:translateX(-50%);
+
+width:4px;
+
+height:230px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+transparent,
+rgba(255,255,255,.7),
+transparent);
+
+opacity:.25;
+
+}
+
+/* Cake Cut Animation */
+
+.cut .cake-left{
+
+transform:
+translateX(-65px)
+rotate(-12deg);
+
+}
+
+.cut .cake-right{
+
+transform:
+translateX(65px)
+rotate(12deg);
+
+}
+
+/* Blow Out Candles */
+
+.cut .flame{
+
+opacity:0;
+
+transition:.5s;
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+#cake{
+
+transform:scale(.82);
+
+margin-top:20px;
+
+}
+
+.title{
+
+font-size:42px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+#message h1{
+
+font-size:38px;
+
+}
+
+}
